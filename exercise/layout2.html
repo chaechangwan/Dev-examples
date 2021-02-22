@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0}
+        #container1{
+            width: 960px;
+            background-color: gainsboro;
+            padding:20px;
+            margin: 0 auto; 
+            position: fixed;  
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+        #header{
+            background-color: blueviolet;
+            padding:20px;           
+        }
+        #container2{          
+            width: 960px;
+            background-color: beige;
+            padding:20px;
+            margin: auto;   
+            position: absolute;
+            right:0;
+            left:0;
+            top: 110px;
+        }
+        #content{
+            background-color: red;
+            width: 600px;
+            height: 900px;
+            float: left;
+            padding: 20px;
+            
+        }
+        #sidebar{
+            width: 260px;
+            height: 900px;
+            background-color:  deeppink;
+            
+            padding: 20px;
+            float: right;
+
+        }
+        #container3{
+            width: 960px;
+            background-color: gainsboro;
+            padding:20px;
+            margin: 0 auto; 
+            position: fixed;  
+            left: 0;
+            right: 0;
+            z-index: 1;
+            bottom: 0;
+        }
+        #footer{
+            background-color: deepskyblue;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="container1">
+            <div id=header>
+                header
+            </div>
+        </div>
+    </header>
+    <section>
+        <div id="container2">
+            <div id="content">
+                Content
+            </div>
+            <div id="sidebar">
+                Sidebar
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div id="container3">
+            <div id="footer">
+                footer
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
