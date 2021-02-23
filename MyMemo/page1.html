@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page1</title>
+    <style>
+        body{margin:0}
+        #header{
+            width: 100%;
+            border:2px solid black;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            text-align : center;
+            position: fixed;
+            z-index:1;
+        }
+        #logo{
+            border: 1px solid darkblue;
+            width: 100px;
+            float:left;
+            margin: 20px;
+        }
+        #list{
+            padding-bottom: 50px;           
+            border: 1px solid blue;
+            display:inline-block;
+            margin: 20px;
+
+        }
+        #goWrite{
+            border: 1px solid green;
+            float:right;
+            margin: 20px;
+        }
+        #search{
+            border: 1px solid red;
+        }
+        ul{display:inline;}
+        li{display:inline;}
+        #section1{
+            position: absolute;
+            width: 900px;
+            top: 200px;
+            left: 50%;         
+            transform: translate(-50%);
+            border : 2px solid brown;
+            height: 800px;
+            text-align: center;
+        }
+        #eye{
+            position: fixed;
+            bottom: 100px;
+            right: 100px
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="logo">MyMEMO</div>
+            <div id="list">
+                <button>&lt;</button>
+                <ul>
+                    <li>memo1</li>
+                    <li>memo2</li>
+                    <li>memo3</li>
+                </ul>
+                <button>&gt;</button>
+            </div>
+            <div id="goWrite"><img src="./photo/writing.png"></div>
+            <div id="search">
+                <input type="button" value="검색"><input type="text">
+            </div>
+        </div>
+    </header>
+    <section>
+        <div id="section1">
+            <img src="./photo/memory1.jpeg">
+        </div>
+    </section>
+    <div id="eye"><img src="./photo/photoOff.png"></div>
+</body>
+</html>
