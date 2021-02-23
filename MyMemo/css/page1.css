@@ -1,0 +1,76 @@
+body{margin:0}
+        #header{
+            width: 100%;
+            border:2px solid black;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            text-align : center;
+            position: fixed;
+            z-index:1;
+        }
+        #logo{
+            border: 1px solid darkblue;          
+            float:left;
+            margin: 20px;
+        }
+        #list{                     
+            border: 1px solid blue;
+            display:inline-block;
+            margin: 20px;
+        }
+        #goWrite{
+            border: 1px solid green;
+            float:right;
+            margin: 20px;
+        }
+        #search{
+            border: 1px solid red;
+        }
+        #leftbtn{
+            float: left;
+            margin: 60px 0px;
+        }
+        #rightbtn{
+            float: right;
+            margin: 60px 0px;
+        }
+        #list ul{
+            display:inline-block;
+            border: 2px solid black;
+            list-style-type: none;
+            text-align : center;
+            padding:0px;
+            
+        }
+        #list li{
+            border:2px solid red;
+            display:inline-block;
+            text-align: center;
+            padding: 14px 20px;
+            margin: 30px;
+        }       
+        #section{
+            position: absolute;
+            width: 900px;
+            top: 300px;
+            left: 50%;         
+            transform: translate(-50%);
+            border : 2px solid brown;
+            text-align: center;
+        }
+        #section ul{
+            border: 2px solid purple;
+            list-style-type: none;
+            padding: 0;
+        }
+        #section li{
+            border: 2px solid Blue;
+            margin: 10px;
+            height: 100px;
+            vertical-align: middle;
+        }
+        #eye{
+            position: fixed;
+            bottom: 100px;
+            right: 100px
+        }
