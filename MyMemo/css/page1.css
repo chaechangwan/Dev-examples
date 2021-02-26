@@ -10,27 +10,35 @@ body{margin:0}
         }
         #logo{
             border: 1px solid darkblue;          
-            float:left;
+            position : absolute;
+            margin: 20px;
+            font-family : 'RocknRoll One', sans-serif;
+            font-size: 40px;
+            font-style: italic;
+            color: #FFF56E;
+        }
+        #goWrite{
+            border: 1px solid green;
+            position: absolute;
+            right:0;
+            top:0;
             margin: 20px;
         }
         #list{                     
             border: 1px solid blue;
             display:inline-block;
             margin: 20px;
-        }
-        #goWrite{
-            border: 1px solid green;
-            float:right;
-            margin: 20px;
-        }
-        #search{
-            border: 1px solid red;
+            width: 50%;
+
         }
         #leftbtn{
+            width: 40px;
             float: left;
             margin: 60px 0px;
+            
         }
         #rightbtn{
+            width: 40px;
             float: right;
             margin: 60px 0px;
         }
@@ -40,18 +48,45 @@ body{margin:0}
             list-style-type: none;
             text-align : center;
             padding:0px;
-            
+            width: 90%;
+            height: 90%;
+   
         }
-        #list li{
-            border:2px solid red;
+        #list ul li{
+            background-color: #FFFF8C;
             display:inline-block;
             text-align: center;
             padding: 14px 20px;
-            margin: 30px;
+            margin: 10px;
+            width: 25%;
+            height: 70px;
+            border-radius: 3px;
+            box-shadow: 10px 10px 15px -10px black;
+        
+ 
         }       
+        #search{
+            border: 1px solid red;
+        }
+        
+        #searchBar{
+            border: 2px solid #000069;
+            width: 20%;
+            height: 40px;
+            outline:none;
+            border-radius:5px;
+            position: relative;
+            bottom: 15px;
+            left : 5px;
+        }
+        ::placeholder{
+            color:#FFF56E;
+            font-size:17px;
+            font-style:italic
+        }
         #section{
             position: absolute;
-            width: 900px;
+            width: 50%;
             top: 300px;
             left: 50%;         
             transform: translate(-50%);
@@ -63,12 +98,30 @@ body{margin:0}
             list-style-type: none;
             padding: 0;
         }
-        #section li{
-            border: 2px solid Blue;
+        #section> ul> li{
+            padding: 15px;
+            position: relative;
             margin: 10px;
+            background-color: #FFFF8C;
             height: 100px;
-            vertical-align: middle;
+            border-radius: 3px;
+            box-shadow: 10px 10px 15px -10px black;
         }
+
+        #section ul ul{
+            opacity: 0;
+            transition: all 0.3s;
+            visibility: hidden;
+            position: absolute;
+            left: 100%;
+            top: 10%;
+        }
+
+        #section ul li:hover > ul {
+            opacity: 1;
+            visibility: visible;
+        }
+
         #eye{
             position: fixed;
             bottom: 100px;
