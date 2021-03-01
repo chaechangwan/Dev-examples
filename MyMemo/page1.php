@@ -56,8 +56,8 @@
                     </div>               
             
                     <ul class="dropdown">
-                        <li><a href='#'><img src='./photo/heart.png' width="40px" height="40px"></a></li>
-                        <li><a href='#'><img src='./photo/trash.png' width="40px" height="40px"></a></li>
+                        <li><a href='#'><img src='./photo/heart.png'></a></li>
+                        <li><a href='#'><img src='./photo/trash.png'></a></li>
                     </ul>
                 </li>
 <?php
