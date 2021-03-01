@@ -38,8 +38,9 @@ function getContent(){
                 }else{
                     img1.setAttribute('src','./photo/heart.png');
                 }
+                const memo_idx = element.memo_idx; //memo_idx는 언제 소멸하는 것일까, 블록의 범위는 어디까지일까(for문 한번돌때마다 블록인가 아니면 for문 전체가 한블록인가)
                 img1.onclick = function(){ //addEventListener로 오류
-                    changeCheck(element.memo_idx);
+                    changeCheck(memo_idx);
                 }
                 img2.setAttribute('src','./photo/trash.png');
                 a1.appendChild(img1);
@@ -71,4 +72,15 @@ function getContent(){
 
 function changeCheck(memo_idx){
     console.log(memo_idx);
+    httpRequest.onreadystatechange = function(){
+        if(httpRequest.readyState == XMLHttpRequest.DONE){
+            if(httpRequest.status == 200){
+                search();
+            }else{
+                alert('Ajax통신에 문제발생.');
+            }
+        }
+    }
+    httpRequest.open('GET', './changeCheck_ok.php?memo_idx=' + memo_idx, true);
+    httpRequest.send();
 }
