@@ -25,22 +25,31 @@
 <body>
     <header>
         <div id="header">
-            <div id="logo">MyMEMO</div>
-            <div id="toplist">
-                <img id="leftbtn" src="./photo/moveleft.png">
-                
-                    <ul>
+
+            <div class = "flexbox1"> <!--flex-->
+                <div id="logo">MyMEMO</div> 
+                <div id="toplist"> <!--flex-->
+                    <!--왼쪽 버튼 -->
+                    <img class="prevbtn" src="./photo/moveleft.png" onclick="loadPrev()">
+                    
+                    <ul class="carousel-slide"> <!-- flex-->
                         <li>memo1</li>
-                        <li>memo2</li>
-                            
+                        <li>memo2</li>                                                          
+                        <li>memo3</li>                                                          
+                        <li style="display: none;">memo4</li>                                                          
                     </ul>
-                
-                <img id="rightbtn" src="./photo/moveright.png">
+                    
+                    <!--오른쪽 버튼 -->
+                    <img class="nextbtn" src="./photo/moveright.png" onclick="loadNext()">                  
+                </div>
+                <div id="goWrite"><img src="./photo/writing.png"></div>
             </div>
-            <div id="goWrite"><img src="./photo/writing.png"></div>
+
+
             <div id="search">
                 <img src="./photo/search.png" width="40px;"><input id="searchBar" type="text" onkeyup="search()" placeholder="검색어를 입력해주세요">
             </div>
+
         </div>
     </header>
     <section>

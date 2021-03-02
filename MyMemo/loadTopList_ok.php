@@ -1,6 +1,8 @@
 <?php
     include './include/dbconn.php';
-    $sql = "SELECT * FROM tb_memo WHERE memo_check = 'y'";
+    $topListPage = $_GET['topListPage'];
+    $startPage = $topListPage * 3;
+    $sql = "SELECT * FROM tb_memo WHERE memo_check = 'y' LIMIT $startPage, 3";
     $result = mysqli_query($conn, $sql);
     if($result){
         $arr = array();

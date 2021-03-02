@@ -1,4 +1,6 @@
 let httpRequest = 0;
+let topListPage = 0;
+
 ////////////////////////
 window.onload = function(){
     search();
@@ -92,7 +94,7 @@ function loadTopList(){
         if(httpRequest.readyState == XMLHttpRequest.DONE){
             if(httpRequest.status == 200){
                 const res = JSON.parse(httpRequest.responseText);
-                //console.log(res);
+                console.log(res);
                 const ul = document.querySelector('#toplist ul');
                 while(ul.hasChildNodes()){
                     ul.removeChild(ul.firstChild);
@@ -100,14 +102,22 @@ function loadTopList(){
                 res.forEach(function(element, idx, array){
                     const li = document.createElement('li');
                     li.innerHTML = element.memo_content;
-                    ul.appendChild(li);
-                    
+                    ul.appendChild(li);                    
                 })
             }else{
                 alert('AJAX통신에 문제발생');
             }
         }
     }
-    httpRequest.open('GET','loadTopList_ok.php' ,true);
+    httpRequest.open('GET','loadTopList_ok.php?topListPage='+topListPage ,true);
     httpRequest.send()
+}
+
+function loadPrev(){
+    topListPage--;
+    loadTopList();
+}
+function loadNext(){
+    topListPage++;
+    loadTopList();
 }

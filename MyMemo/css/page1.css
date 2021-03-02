@@ -4,14 +4,18 @@ body{margin:0}
             border:2px solid black;
             margin-bottom: 20px;
             padding-bottom: 20px;
-            text-align : center;
             position: fixed;
             z-index:1;
 
         }
+        .flexbox1{
+            display: flex;
+            justify-content: center;
+        }
         #logo{
+            left: 0;
             border: 1px solid darkblue;          
-            position : absolute;
+            position: absolute;
             margin: 20px;
             font-family : 'RocknRoll One', sans-serif;
             font-size: 40px;
@@ -19,48 +23,39 @@ body{margin:0}
             color: #FFF56E;
         }
         #goWrite{
-            border: 1px solid green;
             position: absolute;
             right:0;
-            top:0;
+            border: 1px solid green;           
             margin: 20px;
         }
-        #toplist{                     
+        #toplist{                                 
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
             border: 1px solid blue;
-            display:inline-block;
             margin: 20px;
             width: 50%;
+        }
+        #toplist img{
+            width: 50px;
+            height: 50px;
+        }
 
-        }
-        #leftbtn{
-            width: 40px;
-            float: left;
-            margin: 60px 0px;
-            
-        }
-        #rightbtn{
-            width: 40px;
-            float: right;
-            margin: 60px 0px;
-        }
-        #toplist .flexbox{
-            border: 2px solid green;
-        }
-        #toplist ul{
-            display:inline-block;
+        #toplist .carousel-slide{
+            display:flex; /*li를 inline으로 만들기 위함*/
+            justify-content: center;
+            width: 100%;
             border: 2px solid black;
             list-style-type: none;
             padding:0px;
-            height: 90%;
             transition: all ease 3s 0s;
         }
-        #toplist ul li{
+        #toplist .carousel-slide li{
             background-color: #FFFF8C;
-            display:inline-block;
             padding: 14px 20px;
-            margin: 10px;
-            width: 200px;
-            height: 70px;
+            margin: 20px;
+            width: 25%;
+            height: 80px;
             border-radius: 3px;
             box-shadow: 10px 10px 15px -10px black;
             overflow: hidden;
@@ -72,6 +67,8 @@ body{margin:0}
         
         #search{
             border: 1px solid red;
+            display: flex;
+            justify-content: center;
         }
         
         #searchBar{
@@ -81,7 +78,7 @@ body{margin:0}
             outline:none;
             border-radius:5px;
             position: relative;
-            bottom: 15px;
+
             left : 5px;
         }
         ::placeholder{
