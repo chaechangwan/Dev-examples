@@ -99,11 +99,21 @@ function loadTopList(){
                 while(ul.hasChildNodes()){
                     ul.removeChild(ul.firstChild);
                 }
-                res.forEach(function(element, idx, array){
+                for(let i=0; i<res.length-1; i++){
                     const li = document.createElement('li');
-                    li.innerHTML = element.memo_content;
-                    ul.appendChild(li);                    
-                })
+                    li.innerHTML = res[i].memo_content;
+                    ul.appendChild(li);
+                }
+                if(res[res.length-1].isEnd == true){
+                    document.querySelector('.nextbtn').style.visibility = "hidden";
+                }else{
+                    document.querySelector('.nextbtn').style.visibility = "visible";
+                }
+                if(topListPage == 0){
+                    document.querySelector('.prevbtn').style.visibility = "hidden";
+                }else{
+                    document.querySelector('.prevbtn').style.visibility = "visible";
+                }
             }else{
                 alert('AJAX통신에 문제발생');
             }

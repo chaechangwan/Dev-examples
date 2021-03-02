@@ -35,8 +35,7 @@
                     <ul class="carousel-slide"> <!-- flex-->
                         <li>memo1</li>
                         <li>memo2</li>                                                          
-                        <li>memo3</li>                                                          
-                        <li style="display: none;">memo4</li>                                                          
+                        <li>memo3</li>                                                       
                     </ul>
                     
                     <!--오른쪽 버튼 -->
