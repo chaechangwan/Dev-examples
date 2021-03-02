@@ -1,0 +1,17 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box; /*박스의 width와 height가 안쪽 여백과 테두리를 포함합니다.*/
+}
+
+.carousel-container{
+    width: 500px;
+    margin: auto;
+    border: 3px solid black;
+    overflow:hidden;
+}
+.carousel-slide{
+    display: flex;
+    width: 100%;
+    height: 375px;
+}
