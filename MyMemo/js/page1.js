@@ -20,7 +20,7 @@ function getContent(){
             while(ul.hasChildNodes()){
                 ul.removeChild(ul.firstChild);
             } 
-            console.log(resp);
+            //console.log(resp);
             resp.forEach(function(element, idx, array){
                 const li = document.createElement('li');
                 const ul_dropdown = document.createElement('ul');
@@ -64,6 +64,8 @@ function getContent(){
                 li.appendChild(div2);
                 li.appendChild(ul_dropdown);
                 ul.appendChild(li);
+
+                loadTopList();
             });
             
         }
@@ -71,7 +73,7 @@ function getContent(){
 }
 
 function changeCheck(memo_idx){
-    console.log(memo_idx);
+    //console.log(memo_idx);
     httpRequest.onreadystatechange = function(){
         if(httpRequest.readyState == XMLHttpRequest.DONE){
             if(httpRequest.status == 200){
@@ -83,4 +85,29 @@ function changeCheck(memo_idx){
     }
     httpRequest.open('GET', './changeCheck_ok.php?memo_idx=' + memo_idx, true);
     httpRequest.send();
+}
+
+function loadTopList(){
+    httpRequest.onreadystatechange = function(){
+        if(httpRequest.readyState == XMLHttpRequest.DONE){
+            if(httpRequest.status == 200){
+                const res = JSON.parse(httpRequest.responseText);
+                //console.log(res);
+                const ul = document.querySelector('#toplist ul');
+                while(ul.hasChildNodes()){
+                    ul.removeChild(ul.firstChild);
+                }
+                res.forEach(function(element, idx, array){
+                    const li = document.createElement('li');
+                    li.innerHTML = element.memo_content;
+                    ul.appendChild(li);
+                    
+                })
+            }else{
+                alert('AJAX통신에 문제발생');
+            }
+        }
+    }
+    httpRequest.open('GET','loadTopList_ok.php' ,true);
+    httpRequest.send()
 }

@@ -28,11 +28,13 @@
             <div id="logo">MyMEMO</div>
             <div id="toplist">
                 <img id="leftbtn" src="./photo/moveleft.png">
-                <ul>
-                    <li>memo1</li>
-                    <li>memo2</li>
-                        
-                </ul>
+                
+                    <ul>
+                        <li>memo1</li>
+                        <li>memo2</li>
+                            
+                    </ul>
+                
                 <img id="rightbtn" src="./photo/moveright.png">
             </div>
             <div id="goWrite"><img src="./photo/writing.png"></div>

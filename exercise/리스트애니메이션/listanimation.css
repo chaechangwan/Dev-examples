@@ -1,0 +1,9 @@
+.item{
+    margin-top: 1000px;
+    opacity: 0;
+    transition : all ease 2s 0s;
+}
+.item.active{
+    margin-top: 0;
+    opacity: 1;
+}

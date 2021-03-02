@@ -43,13 +43,16 @@ body{margin:0}
             float: right;
             margin: 60px 0px;
         }
+        #toplist .flexbox{
+            border: 2px solid green;
+        }
         #toplist ul{
             display:inline-block;
             border: 2px solid black;
             list-style-type: none;
             padding:0px;
-            width: 90%;
             height: 90%;
+            transition: all ease 3s 0s;
         }
         #toplist ul li{
             background-color: #FFFF8C;
@@ -60,7 +63,13 @@ body{margin:0}
             height: 70px;
             border-radius: 3px;
             box-shadow: 10px 10px 15px -10px black;
-        }       
+            overflow: hidden;
+        }
+
+        #toplist ul li:hover{
+            filter: brightness(130%);
+        }
+        
         #search{
             border: 1px solid red;
         }
@@ -93,6 +102,7 @@ body{margin:0}
             border: 2px solid purple;
             list-style-type: none;
             padding: 0;
+
         }
         #section> ul> li{
             padding: 10px;
