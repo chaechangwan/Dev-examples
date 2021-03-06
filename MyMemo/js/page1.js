@@ -31,8 +31,6 @@ function getContent(){
                 const div1 = document.createElement('div');
                 const div1_2 = document.createElement('div');
                 const div2 = document.createElement('div');
-                const a1 = document.createElement('a');
-                const a2 = document.createElement('a');
                 const img1 = document.createElement('img');
                 const img2 = document.createElement('img');
                 if(element.memo_check == "y"){
@@ -45,10 +43,8 @@ function getContent(){
                     changeCheck(memo_idx);
                 }
                 img2.setAttribute('src','./photo/trash.png');
-                a1.appendChild(img1);
-                a2.appendChild(img2);
-                li_dropdown1.appendChild(a1);
-                li_dropdown2.appendChild(a2);
+                li_dropdown1.appendChild(img1);
+                li_dropdown2.appendChild(img2);
                 ul_dropdown.appendChild(li_dropdown1);
                 ul_dropdown.appendChild(li_dropdown2);
                 ul_dropdown.classList.add('dropdown');
@@ -67,7 +63,7 @@ function getContent(){
                 li.appendChild(ul_dropdown);
                 ul.appendChild(li);
 
-                loadTopList();
+                //loadTopList();
             });
             
         }

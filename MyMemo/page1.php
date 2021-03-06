@@ -32,8 +32,13 @@
                     <!--왼쪽 버튼 -->
                     <img class="prevbtn" src="./photo/moveleft.png" onclick="loadPrev()">
                     
-                    <ul class="carousel-slide"> <!-- flex-->
-                        <li>memo1</li>
+                    <ul> <!-- flex-->
+                        <li>
+                            <div>memo1</div>
+                            <div>
+                                <img class="X" src="photo/X.png">
+                            </div>
+                        </li>
                         <li>memo2</li>                                                          
                         <li>memo3</li>                                                       
                     </ul>

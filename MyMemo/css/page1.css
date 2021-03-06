@@ -1,4 +1,6 @@
-body{margin:0}
+        body{
+            margin:0;             
+        }
         #header{
             width: 100%;
             border:2px solid black;
@@ -6,7 +8,6 @@ body{margin:0}
             padding-bottom: 20px;
             position: fixed;
             z-index:1;
-
         }
         .flexbox1{
             display: flex;
@@ -43,7 +44,7 @@ body{margin:0}
             visibility: hidden;
         }
 
-        #toplist .carousel-slide{
+        #toplist ul{
             display:flex; /*li를 inline으로 만들기 위함*/
             justify-content: center;
             width: 100%;
@@ -52,7 +53,8 @@ body{margin:0}
             padding:0px;
             transition: all ease 3s 0s;
         }
-        #toplist .carousel-slide li{
+        #toplist ul li{
+            position:relative;
             background-color: #FFFF8C;
             padding: 14px 20px;
             margin: 20px;
@@ -60,7 +62,14 @@ body{margin:0}
             height: 80px;
             border-radius: 3px;
             box-shadow: 10px 10px 15px -10px black;
-            overflow: hidden;
+        }
+        #toplist .X{
+            position: absolute;
+            top:100%;
+            right:10px;
+        }
+        #toplist ul li:hover .X{
+            visibility: visible;
         }
 
         #toplist ul li:hover{
@@ -71,8 +80,7 @@ body{margin:0}
             border: 1px solid red;
             display: flex;
             justify-content: center;
-        }
-        
+        }       
         #searchBar{
             border: 2px solid #000069;
             width: 20%;
@@ -80,7 +88,6 @@ body{margin:0}
             outline:none;
             border-radius:5px;
             position: relative;
-
             left : 5px;
         }
         ::placeholder{
@@ -125,10 +132,8 @@ body{margin:0}
         #section> ul> li> div:nth-child(1)> div{
             position: absolute;
             right: 10px;
-            font-style: italic;
-            
+            font-style: italic;         
         }
-
         #section ul ul{
             opacity: 0;
             transition: all 0.3s;
