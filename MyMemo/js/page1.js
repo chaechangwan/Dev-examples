@@ -63,7 +63,7 @@ function getContent(){
                 li.appendChild(ul_dropdown);
                 ul.appendChild(li);
 
-                //loadTopList();
+                loadTopList();
             });
             
         }
@@ -97,7 +97,18 @@ function loadTopList(){
                 }
                 for(let i=0; i<res.length-1; i++){
                     const li = document.createElement('li');
-                    li.innerHTML = res[i].memo_content;
+                    const div1 = document.createElement('div');
+                    const div2 = document.createElement('div');
+                    const img = document.createElement('img');
+                    img.setAttribute('src', './photo/X.png');
+                    img.classList.add('X');
+                    div1.innerHTML = res[i].memo_content;
+                    div2.appendChild(img);
+                    div2.onclick = function(){
+                        changeCheck(res[i].memo_idx);
+                    };
+                    li.appendChild(div1);
+                    li.appendChild(div2);
                     ul.appendChild(li);
                 }
                 if(res[res.length-1].isEnd == true){
