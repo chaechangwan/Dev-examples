@@ -1,0 +1,54 @@
+.container {
+    background: beige;
+    height: 100vh; 
+    display: flex;
+    flex-direction: row; /*main-axis와 reverse 여부*/
+    flex-wrap: nowrap; /*아이템이 한 줄에 가득 차면 다음줄로 넘어갈지 말지와 reverse여부*/
+    /*flex-flow: column nowrap; */ /*direction과 wraping 동시에*/
+    justify-content: flex-start; /*main axis 아이템 배치 방식 결정*/
+     /*cross axis 아이템 배치방식*/
+    align-items: center;
+    
+}
+
+.item {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.item1 {
+    background: #ef9a9a;
+
+}
+.item2 {
+
+    background: #f48fb1;
+}
+.item3 {
+    background: #ce93d8;
+
+}
+.item4 {
+    background: #b39ddb;
+}
+.item5 {
+    background: #90caf9;
+}
+.item6 {
+    background: #a5d6a7;
+}
+.item7 {
+    background: #e6ee9c;
+}
+.item8 {
+    background: #ef9a9a;
+}
+.item9 {
+    background: #edaa7d;
+
+}
+.item10{
+    background: #c8707e;
+
+}

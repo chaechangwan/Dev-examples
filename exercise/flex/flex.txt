@@ -1,0 +1,15 @@
+박스에 지정하는 속성, 아이템에 지정하는 속성이 있다.
+main axis(중심축) 와 cross axis(수직축)이 있다.
+color tool이라는 사이트 -> css 색깔.
+
+#container 속성
+justify-content : flex-start(기본), flex-end, space-around, space-evenly, space-between, center
+align-items : center, baseline(텍스트 균등한 위치에 놓임)
+align-content : justify-content와 같음(수직축에서)
+
+#item 속성
+order
+flex-grow //container가 커졌을때 item들이 얼마나 늘어나느냐
+flex-shrink //container가 작아졌을 때 item들이 얼마나 줄어드느냐.
+flex-basis //item의 비율지정
+align-self //아이템 하나만 특별 배치하고싶다
