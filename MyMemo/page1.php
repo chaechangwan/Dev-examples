@@ -46,7 +46,7 @@
                     <!--오른쪽 버튼 -->
                     <img class="nextbtn" src="./photo/moveright.png" onclick="loadNext()">                  
                 </div>
-                <div id="goWrite"><img src="./photo/writing.png"></div>
+                <div id="goWrite" onclick="location.href='write.php'"><img src="./photo/writing.png"></div>
             </div>
 
 
