@@ -35,7 +35,7 @@
             align-items: center;
             border: 1px solid blue;
             margin: 20px;
-            width: 50%;
+            width: 65%;
             min-height: 180px;         
         }
         #toplist img{
@@ -64,8 +64,19 @@
             box-shadow: 10px 10px 15px -10px black;
         }
         #toplist ul li div:nth-child(1){
-            height:85px;
+            /*여러줄 ...처리 (webkit이용)*/
+            white-space: normal;
+            text-overflow: ellipsis;
             overflow: hidden;
+            line-height: 1.2em;
+            height:4.8em; /*line-height의 n배수*/
+            text-align: left;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            
+          
+            
         }
         #toplist .X{
             position: absolute;
@@ -101,7 +112,7 @@
         }
         #section{
             position: absolute;
-            width: 50%;
+            width: 55%;
             top: 300px;
             left: 50%;         
             transform: translate(-50%);
@@ -123,6 +134,7 @@
             border-radius: 3px;
             box-shadow: 10px 10px 15px -10px black;
         }
+
         #section> ul> li> div:nth-child(1){
             position: relative;
             height: 25px;
