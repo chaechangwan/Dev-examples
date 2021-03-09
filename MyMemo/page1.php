@@ -25,7 +25,10 @@
 <body>
     <header>
         <div id="header">
-
+            <div class = "media_header">
+                <div id="media_logo">MyMEMO</div>
+                <div id="media_goWrite" onclick="location.href='write.php'"><img src="./photo/writing.png"></div>
+            </div>
             <div class = "flexbox1"> <!--flex-->
                 <div id="logo">MyMEMO</div> 
                 <div id="toplist"> <!--flex-->
@@ -51,7 +54,7 @@
 
 
             <div id="search">
-                <img src="./photo/search.png" width="40px;"><input id="searchBar" type="text" onkeyup="search()" placeholder="검색어를 입력해주세요">
+                <img src="./photo/search.png"><input id="searchBar" type="text" onkeyup="search()" placeholder="검색어를 입력해주세요">
             </div>
 
         </div>
@@ -81,6 +84,5 @@
             </ul>
         </div>
     </section>
-    <div id="eye"><img src="./photo/photoOff.png"></div>
 </body>
 </html>
