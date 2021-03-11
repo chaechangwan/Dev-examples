@@ -67,7 +67,7 @@
 ?>
                 <li>     
                     <div style="position:relative;text-align:right;border-bottom:1px solid black;">
-                        <img src="./photo/heart.png" width="20px" style="position: absolute;left:10px;">2021-02-28
+                        <img src="./photo/heart.png" width="20px" style="position: absolute;left:10px;"><div>2021-02-28</div>
                     </div>
                     <div>
                         <a href="#"><?=$row['memo_content']?><a>

@@ -286,6 +286,7 @@
         #section> ul> li> div:nth-child(1)> div{
             position: absolute;
             right: 10px;
+            bottom: 3px;
             font-style: italic;         
         }
 
