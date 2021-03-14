@@ -13,9 +13,9 @@
         <div id="logo">MyMEMO</div>
     </header>
     <section>
-        <form action="write_ok.php" id="frm" method="post">
-            <input type="hidden" value="n">
-            <textarea class="content" autofocus></textarea>
+        <form action="write_ok.php" name="frm" method="post">
+            <input type="hidden" name="check" value="n">
+            <textarea name="content" autofocus></textarea>
             <div class="button">                 
                 <input type="button" class="back" value="BACK" onclick="history.back()"><input type="button" class="save" value="SAVE">
             </div>
