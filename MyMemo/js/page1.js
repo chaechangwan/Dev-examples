@@ -43,6 +43,9 @@ function getContent(){
                     changeCheck(memo_idx);
                 }
                 img2.setAttribute('src','./photo/trash.png');
+                img2.onclick = function(){
+                    deleteList(memo_idx);
+                }
                 li_dropdown1.appendChild(img1);
                 li_dropdown2.appendChild(img2);
                 ul_dropdown.appendChild(li_dropdown1);
@@ -62,6 +65,10 @@ function getContent(){
                 li.appendChild(div2);
                 li.appendChild(ul_dropdown);
                 ul.appendChild(li);
+                li.onclick = function(){
+                    location.href = './rewrite.php?memo_idx='+memo_idx;
+                }
+
 
                 loadTopList();
             });
@@ -84,6 +91,22 @@ function changeCheck(memo_idx){
     httpRequest.open('GET', './changeCheck_ok.php?memo_idx=' + memo_idx, true);
     httpRequest.send();
 }
+
+function deleteList(memo_idx){
+    httpRequest.onreadystatechange = function(){
+        if(httpRequest.readyState == XMLHttpRequest.DONE){
+            if(httpRequest.status == 200){
+                search();
+            }
+        }
+    }
+    httpRequest.open('GET', './delete_ok.php?memo_idx='+memo_idx, true);
+    httpRequest.send();
+}
+
+
+
+
 
 function loadTopList(){
     httpRequest.onreadystatechange = function(){

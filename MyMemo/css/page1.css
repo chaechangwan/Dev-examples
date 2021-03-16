@@ -21,7 +21,7 @@
             position: absolute;
             margin: 20px;
             font-family : 'RocknRoll One', sans-serif;
-            font-size: 40px;
+            font-size: 36px;
             font-style: italic;
             color: #FFF56E;
         }
@@ -180,7 +180,7 @@
             width: 40px;
         }
 
-        @media (max-width: 960px){
+        @media (max-width: 768px){
         #logo{
             display: none;
         }
