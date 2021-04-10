@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive header</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo_left">
+                <img src="./images/react.png" alt="로고">
+                &nbsp;DreamCoding
+            </div>
+            <img src="./images/list2.png" id="toggle-btn">
+        </div>
+        <ul class="menu" id="hidden">
+            <li>Home</li>
+            <li>Gallery</li>
+            <li>Weddings</li>
+            <li>FAQ</li>
+            <li>Bookings</li>
+        </ul>
+        <div class="sns">
+            <img src="./images/twitter.png" alt="트위터">
+            <img src="./images/facebook.png" alt="페이스북">
+        </div>
+        <input type="hidden" id="toggle-value" value="open">
+        <script src="index.js"></script>
+    </header>
+</body>
+</html>
