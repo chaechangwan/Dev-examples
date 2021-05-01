@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multifile upload</title>
+</head>
+<body>
+    <input type='file' name='upload_image[]' id="upload_img" multiple="multiple">
+    <div></div>
+
+    <script>
+        var upload_img = document.querySelector('#upload_img');
+        function ondelete(file_idx){
+            console.log(file_idx);
+            var files = document.querySelector('#upload_img').files;
+            delete files[file_idx];
+            console.log(files);
+        }
+        upload_img.addEventListener('change', function(e){
+            console.log(e.target.files); //e.target은 input[type="file"] 요소
+            fileslength = e.target.files.length; //files 객체의 length프로퍼티
+            for(let i=0; i<fileslength; i++){ //files는 배열이 아니라 객체이므로 forEach문 불가능. (jquery의 each문은 가능하다.)
+                var reader = new FileReader();
+                reader.readAsDataURL(e.target.files[i]);
+                reader.onload = function (e){ //읽기 동작이 성공적으로 완료되었을 때 실행.
+                    var img = document.createElement('img');
+                    console.log(e.target); //e.target은 reader 객체
+                    img.setAttribute('src', e.target.result); //reader객체의 result프로퍼티의 값은 해당 파일의 이미지 정보를 가진 문자열이다.
+                    document.querySelector('div').appendChild(img);
+                    var deletebutton = document.createElement('button');
+                    deletebutton.innerHTML = '삭제';
+                    deletebutton.addEventListener('click', function(){
+                        console.log('123');
+                        ondelete(i);
+                    })
+                    document.querySelector('div').appendChild(deletebutton);
+
+                }  
+            }      
+        }
+    )
+    </script>
+</body>
+    
+</body>
+</html>
