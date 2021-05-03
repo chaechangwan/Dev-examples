@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+        }
+        .header-top {
+            background-color: red;
+            text-align: center;
+            height: 100px;
+        }
+        .header-nav {
+            background-color: sandybrown;
+        }
+        .content {
+            background-color: steelblue;
+            text-align: center;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            height: 50px;
+            padding: 15px 60px;
+            
+        }
+        .fixed {
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        $(function(){
+            let nav_from_top = $('.header-nav').offset().top;
+            $(window).on('scroll', function(){
+                let window = $(this).scrollTop();
+
+                if (nav_from_top <= window) {
+                    $('.header-nav').addClass('fixed');
+                    $('.content').css('margin-top', '50px');
+                } else {
+                    $('.header-nav').removeClass('fixed');
+                    $('.content').css('margin-top', '0px');
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="header-top">
+        스크롤시 헤더 고정<br>
+        스크롤시 헤더 고정<br>
+        스크롤시 헤더 고정<br>
+        스크롤시 헤더 고정
+    </div>
+    <div class="header-nav">
+        <ul>
+            <li>OUTER</li>
+            <li>SHIRTS</li>
+            <li>PANTS</li>
+            <li>SKIRTS</li>
+            <li>AC</li>
+            <li>SALE</li>
+        </ul>
+
+    </div>
+    <div class="content">
+        <div>가</div>
+        <div>나</div>
+        <div>다</div>
+        <div>라</div>
+        <div>마</div>
+        <div>바</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+        <div>scroll</div>
+    </div>
+</body>
+</html>
